@@ -1,0 +1,15 @@
+Wybieram Bistrol Bay - save selected features as...
+
+Vector - Select By Location
+
+Save Selected Features as - 12 budynków
+
+Clip warstwy rivers do bistrol_bay
+
+Bufor 10 km wokół bistrol_bay_rivers
+
+Select by location
+
+Delete selected features in atribute table
+
+

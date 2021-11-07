@@ -1,0 +1,5 @@
+Zaznacaenie w tabeli atrybutów na podsatwie pola USE = 'Military' - 8 obiektów
+
+Basic Statistic for Fields - obliczenie średniej dla zaznaczonych obiektów - średnia ELEV dla zaznaczonych obiektów: 593.25
+
+Atribute table - Selec features - ELEV > 1400 - jedno takie lotnisko - Edit Mode - Delete Selected

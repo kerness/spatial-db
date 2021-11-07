@@ -1,0 +1,8 @@
+Bufor wokół lotnisk
+Bufor wokół torów
+
+Bufor torów - bufor lotnisk
+
+Clip: difference_da_dr oraz regions
+
+Rezultat: tereny na lądzie nie dalej niż 100 km od lotniska i nie bliżej niż 50 km od torów
