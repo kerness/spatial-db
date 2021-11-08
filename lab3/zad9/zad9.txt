@@ -1,1 +1,3 @@
 Vector -> Geometry tools -> Simplify
+Field Calculator - sum()
+Vector -> Extract Vertices
