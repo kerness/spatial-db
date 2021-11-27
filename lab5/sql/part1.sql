@@ -70,8 +70,8 @@ WHERE a.municipality ilike 'porto';
 
 -- ###### ST_TILE
 
-DROP TABLE schema_name.porto_parishes; --> drop table porto_parishes first
-CREATE TABLE schema_name.porto_parishes AS
+DROP TABLE bak.porto_parishes; --> drop table porto_parishes first
+CREATE TABLE bak.porto_parishes AS
 WITH r AS (
 	SELECT rast FROM rasters.dem
 	LIMIT 1 
