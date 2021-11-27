@@ -1,0 +1,30 @@
+0. docker jest niezbędny
+1. clone git repo
+    git clone https://github.com/kartoza/docker-mapserver
+2. cd do docker-mapserver i zbuduj obraz dockerowy (to trochę zajmie)
+    image docker build -t kartoza/mapserver_kartoza .
+3. stwórz kontener (port 8182 to port pod którym będzie można połączyć się z kontenerem z poziomu komputera)
+    sudo docker run -d -p 8182:80 --name mapserver2 -v `pwd`/map:/map kartoza/mapserver_kartoza
+4. wejdź do kontenera
+    sudo docker exec -it mapserver2 /bin/bash
+
+5. sprawdź połączenie z bazą danych
+    apt-get install -y postgresql-client
+    psql postgresql://geo:geo@postgis/rasterdb
+5. zainstaluj jakiś edytor tekstu (na przykład vim)
+    apt-get update
+    apt-get install vim
+6. stwórz mapfile z danymi do połączenia z bazą danych
+    6.1
+        vim /map/dem.map
+    6.2 skopiuj zawartość mapfile z pdfa
+    6.3 zmień dane do połączenia z bazą. W moim przypadku baza jest na innym kontenerze, więc wcześniej musaiłem dodać te kontenery do jednej sieci - więcej pod hasłem "docker network".
+        Jeśli baza jest posatwiona bezpośrednio na Twoim komputerze to nazwą hosta jest prawdopodobnie "host.docker.internal"
+
+        "PG:host=postgis port=5432 dbname=rasterdb user=geo password=geo schema=rasters table=dem mode=2"
+    6.4 zapisz plik
+
+7. gotowe! możesz otworzyć mapkę w przeglądarce
+    http://localhost:8182/cgi-bin/mapserv?map=/map/dem.map&mode=browse&template=openlayers&layers=all
+
+
