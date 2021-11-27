@@ -1,0 +1,33 @@
+# --------------------
+raster2pgsql -s 3763 -N -32767 -t 128x128 -I -C -M -d Landsat8_L1TP_RGBN.tif  raster.landsat8 | psql postgresql://geo:geo@localhost/rasterdb;
+raster2pgsql -s 3763 -N -32767 -t 100x100 -I -C -M -d srtm_1arc_v3.tif  raster.dem | psql postgresql://geo:geo@localhost/rasterdb;
+pg_restore -h localhost -p 5432 -U geo -d rasterdb -v postgis_raster.backup
+
+
+# --------------------
+psql postgresql://geo:geo@localhost
+psql --user=geo --host=localhost
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

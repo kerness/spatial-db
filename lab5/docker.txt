@@ -1,0 +1,4 @@
+ 
+docker run -d -p 8602:8080 --name geoserver_db -e COMMUNITY_EXTENSIONS=pgraster-plugin,imagemosaic-jdbc-plugin -e GEOSERVER_ADMIN_USER=geo -e GEOSERVER_ADMIN_PASSWORD=geo kartoza/geoserver
+
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE ImageMosaicJDBCConfig [
+      <!ENTITY mapping PUBLIC "mapping"  "mapping.pgraster.xml.inc">
+      <!ENTITY connect PUBLIC "connect"  "connect.pgraster.xml.inc">
+]>
+
+<config version="1.0">
+      <coverageName name="mosaicpgraster"/>
+      <coordsys name="EPSG:3763"/>
+      <scaleop  interpolation="1"/>
+      <axisOrder ignore="false"/>
+      &mapping;
+      &connect;
+</config>
+
