@@ -1,0 +1,25 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 25432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "geodb",
+            "database": "geodb",
+            "username": "geo"
+        },
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 25432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "rasterdb",
+            "database": "rasterdb",
+            "username": "geo"
+        }
+    ],
+    "python.pythonPath": "/opt/anaconda/bin/python"
+}
